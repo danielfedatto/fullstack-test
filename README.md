@@ -1,6 +1,6 @@
 # Fullstack Test
 
-## Arquitetura limpa e DDD
+## 1) Arquitetura limpa e DDD
 
 Explique rapidamente (em até 3 frases) a diferença entre “camada de domínio” e “camada de aplicação” dentro da arquitetura limpa. Dê um exemplo prático (em pseudocódigo ou TypeScript) de uma entidade de domínio “Task”.
 
@@ -10,9 +10,11 @@ A Clean Architecture foca na separação do código em camadas para manter o sis
 
 ---
 
-## Padrões de Projeto
+## 2) Padrões de Projeto
 
 Você precisa acessar dados de tarefas a partir de diferentes bancos (PostgreSQL e MongoDB). Qual padrão de projeto usaria para isolar essa lógica e manter o código flexível? Mostre um pequeno exemplo de código TypeScript.
+
+**Resposta:**
 
 ```typescript
 interface Tarefas {
@@ -70,7 +72,7 @@ async function main() {
 
 ---
 
-## Node.js + Express
+## 3) Node.js + Express
 
 Escreva uma rota simples em Express que retorne todas as tarefas de um usuário autenticado. O ID do usuário virá no `req.user.id`. Retorne um JSON no formato:  
 `{ "tasks": [ { "id": 1, "title": "Fazer deploy" } ] }`
@@ -108,7 +110,7 @@ export default router;
 
 ---
 
-## Next.js + TailwindCSS
+## 4) Next.js + TailwindCSS
 
 Explique (em uma frase) a diferença entre Server Components e Client Components no Next.js 13+. Mostre um exemplo rápido de um botão estilizado com TailwindCSS que dispara uma função `handleAddTask()`.
 
@@ -138,7 +140,7 @@ export default function AddTaskButton() {
 
 ---
 
-## Git e Boas Práticas
+## 5) Git e Boas Práticas
 
 Você está desenvolvendo uma nova funcionalidade chamada “criar tarefa”. Escreva três nomes de commits claros e padronizados que você usaria.
 
@@ -152,7 +154,7 @@ test: adiciona testes unitários para criação de tarefas
 
 ---
 
-## TypeScript – Tipagem
+## 6) TypeScript – Tipagem
 
 Crie uma interface TypeScript chamada `Task` com os campos `id`, `title`, `completed`, `createdAt`. Declare uma variável `tasks` que seja um array dessa interface e adicione duas tarefas de exemplo.
 
@@ -184,7 +186,7 @@ const tasks: Task[] = [
 
 ---
 
-## Next.js – API Routes
+## 7) Next.js – API Routes
 
 Crie uma API Route em Next.js chamada `/api/tasks` que retorne uma lista de tarefas simulada em JSON.
 
@@ -212,7 +214,7 @@ export async function GET() {
 
 ---
 
-## Node.js – Manipulação de Dados
+## 8) Node.js – Manipulação de Dados
 
 Escreva uma função TypeScript que recebe um array de tarefas (`Task[]`) e retorna somente as tarefas que não foram concluídas (`completed === false`).
 
@@ -224,7 +226,7 @@ const getIncompleteTasks = (tasks: Task[]): Task[] => tasks.filter(task => !task
 
 ---
 
-## TailwindCSS – Estilização
+## 9) TailwindCSS – Estilização
 
 Mostre como criar uma lista de tarefas usando TailwindCSS, onde cada item da lista:
 
@@ -258,7 +260,7 @@ export default function TaskList({ tasks }) {
 
 ---
 
-## Boas práticas de código
+## 10) Boas práticas de código
 
 Você está trabalhando em uma função que cria uma nova tarefa, mas percebe que o código está ficando muito longo e repetitivo. Cite duas práticas ou técnicas para melhorar a organização e explique uma linha de raciocínio de arquitetura limpa ou DDD que aplicaria.
 
